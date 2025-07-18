@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Advinhação</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Jogo de Adivinhar</h1>
+        <nav>
+            <h3>Bem vindo ao Jogo de adivinhar</h3>
+        </nav>
+    </header>
+    <main>
+        <h2>Regras</h2>
+        <p>Você deve escolher um numero de 0 a 10,<br>
+        e a maquina vai gerar um numero aleatoria na mesma faixa,<br>
+        tente adivinhar o numero!
+        </p>
+        <form>
+            <section>
+                <label for="palpite">Seu Numero</label>
+                <input type="number" id="campo_palpite" placeholder="Digite seu numero aqui!!">
+                <p id="mensagem"></p>
+                <p id="score"></p>
+            </section>
+        </form>
+        <button type="button" onclick="verificarPalpite()">Jogar</button>
+    </main>
+    
+</body>
+</html>

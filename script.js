@@ -1,13 +1,14 @@
 const numeroScreto = Math.floor(Math.random()*10 +1);
-let tentativas = 10;
+let tentativas = 2;
 let score = 0;
+let venceu = false;
 
 function verificarPalpite(){
     const palpite = parseInt(document.getElementById("campo_palpite").value);
     const mensagem = document.getElementById("mensagem");
     const scoreMensagem = document.getElementById("score");
     
-    if(tentativas > 0){
+    if(tentativas > 0 && venceu == false){
         if(palpite < 1 || palpite > 10){
             mensagem.textContent = "O Numero é invalido, digite um numero de 1 a 10!";
         }else if(palpite === numeroScreto){
@@ -27,4 +28,7 @@ function verificarPalpite(){
         mensagem.textContent = "Você excedeu suas tentativas"
     }
 
+}
+function reset(){
+    location.reload(true);
 }
